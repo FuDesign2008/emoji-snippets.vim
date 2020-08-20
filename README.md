@@ -1,6 +1,6 @@
 # emoji-snippets.vim
 
-emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe).
+emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) for completion.
 
 ## Supported emoji
 
@@ -10,6 +10,7 @@ emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core
 | emjcheck         | ✅    |
 | emjx             | ❌    |
 | emjcircle        | ⚪️   |
+| emjsquare        | 🔲    |
 
 ## Reference
 
