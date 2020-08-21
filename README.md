@@ -11,6 +11,7 @@ emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core
 | emjx             | ❌    |
 | emjcircle        | ⚪️   |
 | emjsquare        | 🔲    |
+| emjrocket        | 🚀    |
 
 ## Reference
 
