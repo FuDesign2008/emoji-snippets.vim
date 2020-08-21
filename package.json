@@ -1,0 +1,23 @@
+{
+  "name": "emoji-snippets.vim",
+  "version": "1.0.0",
+  "description": "emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) for completion.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuDesign2008/emoji-snippets.vim.git"
+  },
+  "author": "fudesign2008",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FuDesign2008/emoji-snippets.vim/issues"
+  },
+  "homepage": "https://github.com/FuDesign2008/emoji-snippets.vim#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "typescript": "^4.0.2"
+  }
+}
