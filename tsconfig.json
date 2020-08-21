@@ -1,19 +1,11 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "baseUrl": "./",
-    "outDir": "build",
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "emitDecoratorMetadata": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "resolveJsonModule": true,
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types"]
-  },
-  "include": ["./src/**/*.ts", "./libs/**/*.json"],
-  "exclude": ["./src/public/", "./ecosystem.config.js"]
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  }
 }

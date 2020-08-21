@@ -14,6 +14,7 @@ function createEmojiSnippet(
   emoji: string,
   name: string,
   description: string,
+  isTag = false,
 ): string[] {
   if (!counter[name]) {
     counter[name] = 0
@@ -23,6 +24,7 @@ function createEmojiSnippet(
   const theCounter = counter[name]
   const theName = theCounter > 0 ? `${name}${theCounter}` : name
   const lines = [
+    isTag ? '# tag ' : '# name',
     `snippet emj${theName} "emoji ${emoji}: ${description}"`,
     `${emoji}`,
     `endsnippet`,
@@ -30,8 +32,8 @@ function createEmojiSnippet(
   return lines
 }
 
-function createEmojiSnippetAll(): string[] {
-  const snippets = []
+function createEmojiSnippetAll(): string {
+  const snippets: Array<string[]> = []
   gemoji.forEach((item) => {
     const { names, tags, emoji, description } = item
     names.forEach((name) => {
@@ -39,7 +41,7 @@ function createEmojiSnippetAll(): string[] {
       snippets.push(snippet)
     })
     tags.forEach((tag) => {
-      const snippet = createEmojiSnippet(emoji, tag, description)
+      const snippet = createEmojiSnippet(emoji, tag, description, true)
       snippets.push(snippet)
     })
   })
@@ -49,9 +51,9 @@ function createEmojiSnippetAll(): string[] {
   })
   lines.unshift('# This file is generated, do not modified')
   const content = lines.join(lineBreak)
-
-  fs.writeFileSync('./UltiSnips/all.snippets', content)
+  return content
 }
 
-createEmojiSnippetAll()
+let snippets = createEmojiSnippetAll()
+fs.writeFileSync('./UltiSnips/all.snippets', snippets)
 process.exit()
