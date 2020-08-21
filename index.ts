@@ -24,6 +24,7 @@ function createEmojiSnippet(
   const theCounter = counter[name]
   const theName = theCounter > 0 ? `${name}${theCounter}` : name
   const lines = [
+    '',
     isTag ? '# tag ' : '# name',
     `snippet emj${theName} "emoji ${emoji}: ${description}"`,
     `${emoji}`,
@@ -45,6 +46,8 @@ function createEmojiSnippetAll(): string {
       snippets.push(snippet)
     })
   })
+
+  console.log(`create ${snippets.length} snippets`)
 
   const lines = snippets.map((item) => {
     return item.join(lineBreak)
