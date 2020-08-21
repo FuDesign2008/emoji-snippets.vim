@@ -4,15 +4,16 @@ emoji snippets for vim, working with [YouCompleteMe](https://github.com/ycm-core
 
 ## Supported emoji
 
-| snippets trigger | emoji |
-| :--------------- | :---- |
-| emjsmile         | 😄    |
-| emjcheck         | ✅    |
-| emjx             | ❌    |
-| emjcircle        | ⚪️   |
-| emjsquare        | 🔲    |
-| emjrocket        | 🚀    |
+See [./list.md](./list.md)
+
+## build
+
+```bash
+
+ts-node ./index.ts
+
+```
 
 ## Reference
 
--   https://github.com/caiyongji/emoji-list
+- https://github.com/wooorm/gemoji
