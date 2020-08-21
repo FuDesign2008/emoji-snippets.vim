@@ -10,9 +10,10 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true,
     "types": ["node"],
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["./src/**/*.ts", "./tools/**/*.ts"],
+  "include": ["./src/**/*.ts", "./libs/**/*.json"],
   "exclude": ["./src/public/", "./ecosystem.config.js"]
 }
