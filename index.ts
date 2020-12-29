@@ -36,7 +36,7 @@ function createEmojiSnippet(
   const theName = theCounter > 0 ? `${name}${theCounter}` : name
   const lines = [
     '',
-    isTag ? '# tag ' : '# name',
+    isTag ? '# tag' : '# name',
     `snippet ${theName} "emoji ${emoji}: ${description}"`,
     `${emoji}`,
     `endsnippet`,
