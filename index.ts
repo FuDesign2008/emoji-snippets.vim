@@ -5,8 +5,10 @@
  */
 
 import gemoji from './libs/gemoji/index.json'
+import emojiRank from './libs/tracker/index.json'
 import * as fs from 'fs'
 
+const maxSnippets = 256
 const counter: { [key: string]: number } = {}
 const lineBreak = '\r\n'
 
@@ -49,9 +51,19 @@ function createEmojiSnippet(
 }
 
 function createEmojiSnippetAll(): string {
+  const topEmojiList: string[] = []
+
+  for (let count = 0; count < maxSnippets; count++) {
+    const rankItem = emojiRank[count]
+    topEmojiList.push(rankItem.char)
+  }
+
   const snippets: Array<string[]> = []
   gemoji.forEach((item) => {
     const { names, tags, emoji, description } = item
+    if (!topEmojiList.includes(emoji)) {
+      return
+    }
     names.forEach((name) => {
       const snippet = createEmojiSnippet(emoji, name, description)
       snippets.push(snippet)
